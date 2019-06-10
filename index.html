@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/night.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h2>Chatbots and Conversational Interfaces</h2>
+					<aside class="notes">Smart Content Connectors</aside>
+				</section>
+
+				<section>
+					<section>
+						<h2>Platforms and Tools</h2>
+					</section>
+
+					<section>
+							<h3>Platforms/Frameworks</h3>
+								<p class="fragment grow">Google Dialogflow</p>
+								<p class="fragment grow">Amazon Lex</p>
+								<p class="fragment grow">IBM Watson</p>
+								<p class="fragment grow">Luis and Microsoft Bot Framework</p>
+								<p class="fragment grow">Botman and Botkit</p>
+								<aside class="notes">Advantages of Botman and Botkit are that other developers don't have to learn a new platform for fulfillment.</aside>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Other Tools</h2>
+						<p>Sentiment Analysis</p>
+						<p>Personality Insights</p>
+					</section>
+				</section>
+
+				<section>
+					<section><h2>Conversation Design</h2></section>
+					<section>
+						<h3>Conversation Types</h3>
+						<h4 class="fragment grow highlight-blue">Flat Conversations</h4>
+						<p class="fragment grow">Easiest. Similar to an FAQ</p>
+						<h4 class="fragment grow highlight-blue">Tree Based Conversations</h4>
+						<p class="fragment grow">More complex. Threaded/hierarchical conversations.</p>
+						<aside class="notes">Tree Based allows a user to drill down to get more information. It also allows the chatbot to ask questions to fill slots.</aside>
+					</section>
+
+					<section>
+						<h3>Interaction Types</h3>
+						<p class="fragment grow">Natural Language</p>
+						<p class="fragment grow">Prompt Based</p>
+						<p class="fragment grow">Hybrid</p>
+					</section>
+
+					<section>
+						<h3>Tone</h3>
+						<p>What should it "sound" like?</p>
+					</section>
+
+					<section>
+						<h3>Intents</h3>
+						<p>What are the things a user wants to accomplish?</p>
+						<p class="fragment fade-up">...The chatbot can only reply to intents that have been identified.</p>
+						<h4 class="fragment fade-up highlight-blue">Utterances</h4>
+						<p class="fragment fade-up">What can a user say that will trigger each intent?</p>
+						<aside class="notes">Using analytics and training we can adjust the utterances to increase the effectiveness of the bot.</aside>
+					</section>
+
+					<section>
+						<h2>Context</h2>
+						<p>Understanding where a user is in a conversation.</p>
+						<aside class="notes">Critical for tree based conversations.</aside>
+					</section>
+
+					<section>
+						<h2>Slots</h2>
+						<p>What information do we need to capture from the user to move to the next part of the conversation.</p>
+						<aside class="notes">Also relevant specifically to tree based conversations.</aside>
+					</section>
+
+					<section>
+						<h2>Fulfillment</h2>
+						<p>Retrieve data from an external source.</p>
+						<aside class="notes">For example, a list of options (such as locations) that are stored in an external database or available via an api. Or another example might be to validate a user account.</aside>
+					</section>
+
+					<section>
+						<h2>Conversation Repair</h2>
+						<p>Get a user back into the conversation.</p>
+					</section>
+
+					<section>
+						<h2>Escalation</h2>
+						<p>Support form, email, phone, live support.</p>
+						<p>Search Integration</p>
+						<p class="highlight-blue">Avoid Frustration!</p>
+					</section>
+
+				</section>
+
+				<section>
+					<h2>Training</h2>
+					<p>Ongoing improvement to the chatbot.</p>
+					<aside class="notes">Think of the chatbot as initially being in elementary school and needing additional mentoring to better understand what people are saying.</aside>
+				</section>
+
+				<section>
+					<h2>Analytics</h2>
+					<p>How are people using the chatbot?</p>
+					<p>What intents are getting used?</p>
+					<p>Where are people bouncing from the chatbot?</p>
+				</section>
+
+				<section>
+					<h3>Devices</h3>
+					<h4>Where will people interact with the chatbot?</h4>
+					<p class="fragment grow highlight-green">Web</p>
+					<p class="fragment grow">Social Media - Facebook, Messenger, etc.</p>
+					<p class="fragment grow">Smart Speakers</p>
+					<p class="fragment grow">Smart Screens</p>
+					<p class="fragment grow">Other - Mobile, Watches, etc.</p>
+					<aside class="notes">For pilot will likely target just web.</aside>
+				</section>
+
+			</div>
+		</div>
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true }
+				]
+			});
+		</script>
+	</body>
+</html>
